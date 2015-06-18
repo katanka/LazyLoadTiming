@@ -21,6 +21,7 @@ chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
 
 def processPage(n):
 
+	driver = False
 	
 	try:
 		driver = webdriver.Chrome(chrome_options=chrome_options)
