@@ -35,7 +35,8 @@ def processPage(n):
 		domContentLoadedEventEnd = performanceTiming['domContentLoadedEventEnd'] - navigationStart
 		loadEventStart = performanceTiming['loadEventStart'] - navigationStart
 	finally:
-		driver.quit()
+		if(driver):
+			driver.quit()
 	
 	return {
 		'domContentLoadedEventStart': domContentLoadedEventStart,
